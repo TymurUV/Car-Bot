@@ -1,4 +1,4 @@
-package com.TelegramBot.Car.Bot.impl;
+package com.TelegramBot.Car.Bot.service.impl;
 
 import com.TelegramBot.Car.Bot.domain.User;
 import com.TelegramBot.Car.Bot.repository.UserRepository;
@@ -51,5 +51,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUserById(Long id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public User findUserByChatId(Long chatId) {
+        return userRepository.findUserByChatId(chatId);
     }
 }

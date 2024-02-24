@@ -14,4 +14,6 @@ public interface UserService {
     List<User> getAllUsers();
 
     void deleteUserById(Long id);
+
+    User findUserByChatId(Long chatId);
 }
